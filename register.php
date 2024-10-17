@@ -1,6 +1,6 @@
 <?php
+ require 'include/header.php';
 
-session_start();
 require 'include/connect.php';
 if(isset($_POST['register'])){ 
     //input validation
@@ -32,13 +32,12 @@ if(isset($_POST['register'])){
     
     }
 ?>
-<?php require 'include/header.php';?>
 
 <main class="w-50 m-auto">
 <form action="register.php" method="post">
     <div class="card mt-3">
         <div class="row-justify-content-center">
-            <div class="card-header">Register</div>
+            <!-- <div class="card-header">Register</div> -->
             <div class="card-body">
                 <div class="mb-3">
                     <label for="" class="form-label">Username</label>

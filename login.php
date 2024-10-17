@@ -38,7 +38,7 @@ if(isset($_POST['login'])){
 <form action="login.php" method="post">
     <div class="card mt-3">
         <div class="row-justify-content-center">
-            <div class="card-header">Login</div>
+            <!-- <div class="card-header text-center">Login</div> -->
             <div class="card-body">
                 <div class="mb-3">
                     <label for="" class="form-label">Username</label>
