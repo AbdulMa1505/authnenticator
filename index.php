@@ -1,8 +1,6 @@
-<?php
-require 'include/header.php';
-?>
+<?php require 'include/header.php';?>
 
+<?php echo "hey:( ".  $_SESSION['username']. "this is the dashboard"; ?>
 
-hey:(  this is the dashbaord;
-<?php
-require 'include/footer.php';
+<?php  require 'include/footer.php'; ?>
+    

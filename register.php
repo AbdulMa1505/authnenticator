@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 require 'include/connect.php';
 if(isset($_POST['register'])){ 
     //input validation
@@ -18,6 +20,8 @@ if(isset($_POST['register'])){
             $stmt->bindParam(':email',$email);
             $stmt->bindParam(':password',$password);
             if($stmt->execute()){
+                $_SESSION['username']=$user['username'];
+                $_SESSION['email']=$user['email'];
                 header('Location:login.php');
                 exit();
             }

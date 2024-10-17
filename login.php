@@ -1,4 +1,5 @@
 <?php
+require 'include/header.php';
  require 'include/connect.php';
 if(isset($_POST['login'])){
     // validation
@@ -18,6 +19,8 @@ if(isset($_POST['login'])){
             
             // Check if user exists and verify password
             if($user && password_verify($password, $user['password'])){
+                $_SESSION['username']=$user['username'];
+                $_SESSION['email']=$user['email'];
                 header('Location:index.php');
                 exit();
             } else {
@@ -29,7 +32,7 @@ if(isset($_POST['login'])){
     }
 }
 ?>
-<?php require 'include/header.php';?>
+
 
 <main class="w-50 m-auto">
 <form action="login.php" method="post">
